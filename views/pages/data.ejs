@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head') %>
+</head>
+<header>
+    <%- include('../partials/header') %>
+</header>
+
+<body>
+    <main class="">
+        <div class="jumbotron jumbotron-fluid">
+
+            <div class="m-4 align-items-center justify-content-center row-sm-12">
+
+                <div class="text-center">
+                    <h1 class="text-success">FUZZY SEARCH</h1>
+                </div>
+
+                <hr />
+                <h1>TOP RESULT</h1>
+                <p>Hasil pencarian <span><strong>"<%= keyword %>"</strong></span> dengan treshold <span><strong><%=
+                                threshold %></strong></span> dan distance <span><strong><%= distance %></strong></span></p>
+                <ul class="">
+                    <% data.forEach(element=> { %>
+                        <li class="">
+                            <div>
+                                <h3>
+                                    <%= element.item.merek %>
+                                </h3>
+                            </div>
+                        </li>
+                        <% }) %>
+                </ul>
+            </div>
+        </div>
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+<footer>
+    <%- include('../partials/footer') %>
+</footer>
+
+</html>
